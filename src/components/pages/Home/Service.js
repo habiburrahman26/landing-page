@@ -12,7 +12,7 @@ const Service = ({
 }) => {
   return (
     <div
-      className={`shadow-lg rounded-lg p-3 flex flex-col gap-2 ${
+      className={`shadow-lg rounded-lg p-3 flex flex-col gap-0 md:gap-2 ${
         darkMode ? 'bg-darkMode3' : 'bg-white'
       }`}
     >
@@ -23,19 +23,19 @@ const Service = ({
         <img src={image2} alt="bloodPresure" className="w-10 h-10" />
       )}
       <p
-        className={`font-semibold text-[12.42px] ${
+        className={`font-semibold text-[11px] lg:text-[12.42px] ${
           darkMode ? 'text-darkModeText' : 'text-lightDark'
         }`}
       >
         {name}
       </p>
-      <p className={` ${darkMode ? 'text-darkModeText' : 'text-lightDark'}`}>
+      <p className={`text-xs ${darkMode ? 'text-darkModeText' : 'text-lightDark'}`}>
         {bpm}
       </p>
       <p className="text-xs text-green-400 font-medium flex items-center gap-2">
        {!darkMode && <img src={image3} alt="" />}
        {darkMode && <img src={serviceDrop} alt="" />}
-        <span className={` ${darkMode ? 'text-darkModeText' : 'text-green-400'}`}>{condition}</span>
+        <span className={`text-[11px] ${darkMode ? 'text-darkModeText' : 'text-green-400'}`}>{condition}</span>
       </p>
     </div>
   );

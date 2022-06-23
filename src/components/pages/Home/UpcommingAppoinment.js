@@ -1,8 +1,10 @@
 import React from 'react';
 
-const UpcommingAppoinment = () => {
+const UpcommingAppoinment = ({ darkMode }) => {
   return (
-    <div className="flex flex-col gap-6">
+    <div
+      className={`flex flex-col gap-6 hidden`}
+    >
       <div className="text-darkText flex pt-6 relative">
         <div className='lg:w-[63px] h-[101px] bg-white   text-darkText rounded-xl border border-["#EDEBEB"] flex flex-col items-center justify-center -mr-4 z-10'>
           <p className="font-medium text-[13px] opacity-60">2022</p>

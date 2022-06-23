@@ -30,32 +30,38 @@ const Home = () => {
 
   return (
     <>
-      <Navbar darkMode={darkMode} darkModeHandler={darkModeHandler} />
-      <SideBar
+      {/* <Navbar darkMode={darkMode} darkModeHandler={darkModeHandler} /> */}
+      {/* <SideBar
         changeShowHandler={changeShowHandler}
         showSideBar={showSideBar}
         darkMode={darkMode}
-      />
+      /> */}
       <div
-        className={`ml-[76px] pl-14 pb-[70px] font-poppins ${
+        className={`overflow-hidden lg:ml-[76px] pl-0 md:pl-14 pb-[70px] font-poppins ${
           darkMode
             ? 'bg-gradient-to-r from-darkMode1 to-darkMode2'
-            : 'bg-light '
+            : 'bg-green-400'
         }`}
       >
-        <div className=" grid lg:grid-cols-2 pt-4">
+        <div className="grid lg:grid-cols-2 pt-0 md:pt-4">
           <div>
-            <div className="w-[718px] h-[213px] bg-gradient-to-r from-hotpink to-orange px-4 rounded-lg flex md:flex-row flex-col justify-between items-center lg:gap-28">
-              <img src={sample} alt="" className="w-[230px] h-[230px]" />
-              <div className="text-white ">
-                <p className="text-2xl font-semibold mb-3">Hello, Mary Jane!</p>
-                <p className="leading-8">
+            <div className=" h-[498px] lg:h-[213px] bg-gradient-to-r from-hotpink to-orange px-4 md:rounded-lg flex flex-col items-center md:flex-row md:justify-between md:items-center gap-8 md:gap-12 lg:gap-28">
+              <img
+                src={sample}
+                alt=""
+                className="w-[216px] h-[216px] lg:w-[230px] lg:h-[230px]"
+              />
+              <div className="text-white text-center">
+                <p className="text-xl lg:text-2xl font-semibold mb-3">
+                  Hello, Mary Jane!
+                </p>
+                <p className="leading-8 text-sm md:text-base">
                   Stay Up-to-Date with your appointments. You Have No pending
                   Reports
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-[718px] pt-7">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-7 px-4">
               <Service
                 darkMode={darkMode}
                 name="Pulse Count"
@@ -65,7 +71,7 @@ const Home = () => {
                 image3={vector}
                 condition="Normal"
               />
-              
+
               <Service
                 darkMode={darkMode}
                 name="Blood Pressure"
@@ -95,21 +101,25 @@ const Home = () => {
               />
             </div>
             {/* Todo lo=ist */}
-            <TodoList darkMode={darkMode}/>
+            {/* <TodoList darkMode={darkMode} /> */}
           </div>
           {/* upcomming appoinment */}
-          <div className="ml-40 mr-6 h-[570px]">
-            <div className="bg-white p-4 rounded-lg">
+          {/* <section className={`ml-0 hidden lg:ml-40  mr-6 h-[570px] hidden`}>
+            <div
+              className={`p-4 rounded-lg ${
+                darkMode ? 'bg-darkMode3' : 'bg-white'
+              }`}
+            >
               <p className="font-medium font-poppins">Upcoming Appointments</p>
-              <UpcommingAppoinment />
-              <UpcommingAppoinment />
-              <UpcommingAppoinment />
-              <UpcommingAppoinment />
+              <UpcommingAppoinment darkMode={darkMode} />
+              <UpcommingAppoinment darkMode={darkMode} />
+              <UpcommingAppoinment darkMode={darkMode} />
+              <UpcommingAppoinment darkMode={darkMode} />
             </div>
-            <CovidUpdates />
-          </div>
+            <CovidUpdates darkMode={darkMode} />
+          </section> */}
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-[718px] pt-7"></div>
+        {/* <div className="hidden grid grid-cols-2 lg:grid-cols-4 gap-8 w-[718px] pt-7"></div> */}
       </div>
     </>
   );

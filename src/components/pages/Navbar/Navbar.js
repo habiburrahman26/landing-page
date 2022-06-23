@@ -8,7 +8,7 @@ import darkDrop from '../../../assets/icon/downDark.png';
 const Navbar = ({ darkModeHandler, darkMode }) => {
   return (
     <section
-      className={`ml-[76px] pt-8   ${
+      className={`ml-[76px] pt-8 hidden  ${
         darkMode ? 'bg-gradient-to-r from-darkMode1 to-darkMode2' : 'bg-light'
       }`}
     >
