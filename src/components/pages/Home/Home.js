@@ -61,7 +61,7 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-7 px-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-7 px-4 lg:px-0">
               <Service
                 darkMode={darkMode}
                 name="Pulse Count"
@@ -104,7 +104,7 @@ const Home = () => {
             {/* <TodoList darkMode={darkMode} /> */}
           </div>
           {/* upcomming appoinment */}
-          {/* <section className={`ml-0 hidden lg:ml-40  mr-6 h-[570px] hidden`}>
+          <section className={`mx-3 mt-4 md:mt-0 lg:ml-40 lg:mr-6 lg:h-[570px]`}>
             <div
               className={`p-4 rounded-lg ${
                 darkMode ? 'bg-darkMode3' : 'bg-white'
@@ -117,7 +117,7 @@ const Home = () => {
               <UpcommingAppoinment darkMode={darkMode} />
             </div>
             <CovidUpdates darkMode={darkMode} />
-          </section> */}
+          </section>
         </div>
         {/* <div className="hidden grid grid-cols-2 lg:grid-cols-4 gap-8 w-[718px] pt-7"></div> */}
       </div>

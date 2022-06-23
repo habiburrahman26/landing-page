@@ -23,13 +23,13 @@ const Service = ({
         <img src={image2} alt="bloodPresure" className="w-10 h-10" />
       )}
       <p
-        className={`font-semibold text-[11px] lg:text-[12.42px] ${
+        className={`font-semibold text-[11px] lg:tex-xs ${
           darkMode ? 'text-darkModeText' : 'text-lightDark'
         }`}
       >
         {name}
       </p>
-      <p className={`text-xs ${darkMode ? 'text-darkModeText' : 'text-lightDark'}`}>
+      <p className={`text-xs md:text-sm ${darkMode ? 'text-darkModeText' : 'text-lightDark'}`}>
         {bpm}
       </p>
       <p className="text-xs text-green-400 font-medium flex items-center gap-2">
