@@ -9,6 +9,7 @@ import bubble from '../../../assets/icon/Icon_bubble.png';
 import vector from '../../../assets/icon/Vector (1).png';
 import TodoList from './TodoList';
 import UpcommingAppoinment from './UpcommingAppoinment';
+import CovidUpdates from './CovidUpdates';
 
 const Home = () => {
   const [showSideBar, setShowSideBar] = useState(false);
@@ -84,12 +85,15 @@ const Home = () => {
             <TodoList />
           </div>
           {/* upcomming appoinment */}
-          <div className="bg-white p-4 ml-40 rounded-lg mr-6 h-[570px]">
-            <p className="font-medium font-poppins">Upcoming Appointments</p>
-            <UpcommingAppoinment />
-            <UpcommingAppoinment />
-            <UpcommingAppoinment />
-            <UpcommingAppoinment />
+          <div className="ml-40 mr-6 h-[570px]">
+            <div className="bg-white p-4 rounded-lg">
+              <p className="font-medium font-poppins">Upcoming Appointments</p>
+              <UpcommingAppoinment />
+              <UpcommingAppoinment />
+              <UpcommingAppoinment />
+              <UpcommingAppoinment />
+            </div>
+            <CovidUpdates />
           </div>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-[718px] pt-7"></div>
