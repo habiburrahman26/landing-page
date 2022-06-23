@@ -7,24 +7,38 @@ import appoinment from '../../../assets/icon/Icon_Appointment.png';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/icon/Icon_Vector.png';
 import iconside from '../../../assets/icon/Icon_SideArrow_round.png';
+import darkMenu from '../../../assets/icon/darkMenu.png';
+import darkclnder from '../../../assets/icon/darkCln.png';
+import darkSetting from '../../../assets/icon/darkSetting.png';
+import darkHistory from '../../../assets/icon/darkClock.png';
+import darkUser from '../../../assets/icon/darkUser.png';
 
-const SideBar = ({changeShowHandler,showSideBar}) => {
-
+const SideBar = ({ changeShowHandler, showSideBar, darkMode }) => {
   return (
     <div
-      className={`h-screen bg-white px-6 fixed top-0 ${
+      className={`h-screen  px-6 fixed top-0 ${
         showSideBar ? 'w-[264px]' : 'w-[76px] overflow-hidden'
-      } `}
+      }  ${darkMode ? 'bg-darkMode2' : 'bg-white'}  `}
     >
       <div className="pb-[108px] pt-8">
         {showSideBar || (
           <div className="w-[41px] h-[41px]">
-            <img
-              src={menu}
-              className="w-[41px] h-[41px] -ml-2 hover:cursor-pointer"
-              alt="menu icon"
-              onClick={changeShowHandler}
-            />
+            {!darkMode && (
+              <img
+                src={menu}
+                className="w-[41px] h-[41px] -ml-2 hover:cursor-pointer"
+                alt="menu icon"
+                onClick={changeShowHandler}
+              />
+            )}
+            {darkMode && (
+              <img
+                src={darkMenu}
+                className="w-[41px] h-[41px] -ml-2 hover:cursor-pointer"
+                alt="menu icon"
+                onClick={changeShowHandler}
+              />
+            )}
           </div>
         )}
         {showSideBar && (
@@ -47,31 +61,51 @@ const SideBar = ({changeShowHandler,showSideBar}) => {
         <li>
           <Link to="/home" className="flex items-center gap-8 text-base">
             <img className="w-7 h-7" src={home} alt="home" />
-            <span className='text-hotpink font-semibold'>Home</span>
+            <span className="text-hotpink font-semibold">Home</span>
           </Link>
         </li>
         <li>
           <Link to="/home" className="flex items-center gap-8 text-base">
-            <img className="w-7 h-7" src={patient} alt="patient" />
-            <span className='font-semibold'>Patient Profile</span>
+            {!darkMode && (
+              <img className="w-7 h-7" src={patient} alt="patient" />
+            )}
+            {darkMode && (
+              <img className="w-7 h-7" src={darkUser} alt="patient" />
+            )}
+            <span className="font-semibold">Patient Profile</span>
           </Link>
         </li>
         <li>
           <Link to="/home" className="flex items-center gap-8 text-base">
-            <img className="w-7 h-7" src={appoinment} alt="appoinment" />
-            <span className='font-semibold'>Appointments</span>
+            {!darkMode && (
+              <img className="w-7 h-7" src={appoinment} alt="appoinment" />
+            )}
+            {darkMode && (
+              <img className="w-7 h-7" src={darkclnder} alt="appoinment" />
+            )}
+            <span className="font-semibold">Appointments</span>
           </Link>
         </li>
         <li>
           <Link to="/home" className="flex items-center gap-8 text-base">
-            <img className="w-7 h-7" src={history} alt="history" />
-            <span className='font-semibold'>Medical History</span>
+            {!darkMode && (
+              <img className="w-7 h-7" src={history} alt="history" />
+            )}
+            {darkMode && (
+              <img className="w-7 h-7" src={darkHistory} alt="history" />
+            )}
+            <span className="font-semibold">Medical History</span>
           </Link>
         </li>
         <li>
           <Link to="/home" className="flex items-center gap-8 text-base">
-            <img className="w-7 h-7" src={setting} alt="setting" />
-            <span className='font-semibold'>Settings</span>
+            {!darkMode && (
+              <img className="w-7 h-7" src={setting} alt="setting" />
+            )}
+            {darkMode && (
+              <img className="w-7 h-7" src={darkSetting} alt="setting" />
+            )}
+            <span className="font-semibold">Settings</span>
           </Link>
         </li>
       </ul>

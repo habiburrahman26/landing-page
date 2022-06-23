@@ -12,6 +12,10 @@ module.exports = {
         light: '#F9F9F9',
         lightText: '#E0E0E0',
         darkText: '#384449',
+        darkMode1:"#150A09",
+        darkMode2:'#2E1619',
+        darkMode3:'#2C2222',
+        darkModeText:'#D1D5DB'
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
