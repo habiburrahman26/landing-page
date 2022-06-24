@@ -37,15 +37,13 @@ const Home = () => {
         darkMode={darkMode}
       />
       <div
-        className={`overflow-hidden lg:ml-[76px] pl-0 md:pl-14 pb-[70px] font-poppins ${
-          darkMode
-            ? 'bg-gradient-to-r from-darkMode1 to-darkMode2'
-            : 'bg-light'
+        className={`overflow-hidden md:ml-[45px] xl:ml-[76px] pl-0 md:pl-14 pb-[70px] font-poppins ${
+          darkMode ? 'bg-gradient-to-r from-darkMode1 to-darkMode2' : 'bg-light'
         }`}
       >
-        <div className="grid lg:grid-cols-2 pt-0 md:pt-4">
-          <div>
-            <div className="h-[498px] lg:h-[213px] bg-gradient-to-r from-hotpink to-orange px-4 md:rounded-lg flex flex-col items-center md:flex-row md:justify-between md:items-center gap-8 md:gap-12 lg:gap-20">
+        <div className="grid-rows-2 grid grid-cols-1 md:grid-cols-5 xl:grid-cols-5 lg:gap-2 xl:gap-16 2xl:gap-40 pt-0 md:pt-4">
+          <div className="md:col-span-5 lg:col-span-3 xl:col-span-3 md:mr-5 mr-0">
+            <div className="pb-10 lg:h-[213px] bg-gradient-to-r from-hotpink to-orange px-4 md:rounded-lg flex flex-col items-center md:flex-row md:justify-between md:items-center gap-8 md:gap-6">
               <img
                 src={sample}
                 alt=""
@@ -61,7 +59,8 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-7 px-4 lg:px-0">
+            {/* Services */}
+            <div className="grid grid-cols-2 md:grid-cols-4 md:gap-4 gap-3 xl:gap-8 pt-7 px-4 lg:px-0">
               <Service
                 darkMode={darkMode}
                 name="Pulse Count"
@@ -104,7 +103,7 @@ const Home = () => {
             <TodoList darkMode={darkMode} />
           </div>
           {/* upcomming appoinment */}
-          <section className={`mx-3 mt-4 md:mt-0 lg:ml-40 lg:mr-6 lg:h-[570px]`}>
+          <section className="md:col-span-5 lg:col-span-2 mx-3 mt-4 md:mt-0 lg:mr-6 lg:h-[570px]">
             <div
               className={`p-4 rounded-lg ${
                 darkMode ? 'bg-darkMode3' : 'bg-white'

@@ -18,7 +18,7 @@ const SideBar = ({ changeShowHandler, showSideBar, darkMode }) => {
     <div
       className={` h-screen  px-6 fixed top-0 ${
         showSideBar
-          ? 'w-[264px] sm:bg-white'
+          ? 'w-[264px] bg-white'
           : 'w-[76px] bg-transparent overflow-hidden'
       }  ${darkMode ? 'bg-darkMode3 md:bg-darkMode2 text-darkModeText' : 'md:bg-white'} `}
     >

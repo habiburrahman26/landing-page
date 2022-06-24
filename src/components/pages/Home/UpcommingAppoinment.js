@@ -4,7 +4,7 @@ const UpcommingAppoinment = ({ darkMode }) => {
   return (
     <div className={`flex flex-col gap-6`}>
       <div className="text-darkText flex justify-center pt-6 relative">
-        <div className='w-[48px] lg:w-[63px] h-[101px] bg-white   text-darkText rounded-xl border border-["#EDEBEB"] flex flex-col items-center justify-center -mr-4 z-10'>
+        <div className='w-[48px] lg:w-[63px]  bg-white pb-1  text-darkText rounded-xl border border-["#EDEBEB"] flex flex-col items-center justify-center -mr-4 z-10'>
           <p className="font-medium text-[10px] lg:text-[13px] opacity-60">
             2022
           </p>
@@ -12,7 +12,7 @@ const UpcommingAppoinment = ({ darkMode }) => {
           <p className="font-medium text-sm lg:text-xl opacity-60">Sep</p>
         </div>
         <div
-          className={`lg:w-[342px] rounded-lg border border-petch flex flex-col gap-1 px-6 z-0 pt-2 ${
+          className={`pb-1 lg:w-[342px] rounded-lg border border-petch flex flex-col gap-1 px-6 z-0 pt-2 ${
             darkMode ? 'bg-darkMode4' : 'bg-lightPetch'
           }`}
         >

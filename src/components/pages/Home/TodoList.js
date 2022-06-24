@@ -2,12 +2,12 @@ import React from 'react';
 import uncheck from '../../../assets/icon/Icon_Vector_Uncheck.png';
 import check from '../../../assets/icon/Icon_Vector_Check.png';
 import TaskItem from './TaskItem';
-import small from '../../../assets/icon/small.png'
+import small from '../../../assets/icon/small.png';
 
 const TodoList = ({ darkMode }) => {
   return (
     <section
-      className={`mt-9 mx-3 px-3 md:mx-0 py-4 lg:py-0 lg:px-7 lg:pb-[74px] rounded-lg pt-4 ${
+      className={` mt-9 mx-3 px-3 md:mx-0 py-4 lg:py-0 lg:px-7 lg:pb-[74px] rounded-lg pt-4 ${
         darkMode ? 'bg-darkMode3' : 'bg-white'
       }`}
     >
@@ -25,7 +25,11 @@ const TodoList = ({ darkMode }) => {
             darkMode ? 'bg-darkInput' : 'bg-white'
           }`}
         ></textarea>
-        <img src={small} alt=""  className='lg:hidden absolute right-0 bottom-6'/>
+        <img
+          src={small}
+          alt=""
+          className="lg:hidden absolute right-0 bottom-6"
+        />
         <button className="hidden md:block ml-4 self-start px-8 py-2 text-white rounded-md  bg-gradient-to-r from-hotpink to-orange">
           Add
         </button>
