@@ -16,11 +16,13 @@ import darkUser from '../../../assets/icon/darkUser.png';
 const SideBar = ({ changeShowHandler, showSideBar, darkMode }) => {
   return (
     <div
-      className={`h-screen  px-6 fixed hidden top-0 ${
-        showSideBar ? 'w-[264px]' : 'w-[76px] overflow-hidden'
-      }  ${darkMode ? 'bg-darkMode2 text-darkModeText' : 'bg-white'}  `}
+      className={` h-screen  px-6 fixed top-0 ${
+        showSideBar
+          ? 'w-[264px] sm:bg-white'
+          : 'w-[76px] bg-transparent overflow-hidden'
+      }  ${darkMode ? 'bg-darkMode3 md:bg-darkMode2 text-darkModeText' : 'md:bg-white'} `}
     >
-      <div className="pb-[108px] pt-8">
+      <div className=" pb-[108px] pt-8">
         {showSideBar || (
           <div className="w-[41px] h-[41px]">
             {!darkMode && (
@@ -57,7 +59,7 @@ const SideBar = ({ changeShowHandler, showSideBar, darkMode }) => {
           </div>
         )}
       </div>
-      <ul className="flex flex-col gap-12">
+      <ul className="hidden md:flex flex-col gap-12">
         <li>
           <Link to="/home" className="flex items-center gap-8 text-base">
             <img className="w-7 h-7" src={home} alt="home" />
@@ -109,6 +111,61 @@ const SideBar = ({ changeShowHandler, showSideBar, darkMode }) => {
           </Link>
         </li>
       </ul>
+
+      {showSideBar && (
+        <ul className="md:hidden flex flex-col gap-12">
+          <li>
+            <Link to="/home" className="flex items-center gap-8 text-base">
+              <img className="w-7 h-7" src={home} alt="home" />
+              <span className="text-hotpink font-semibold">Home</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/home" className="flex items-center gap-8 text-base">
+              {!darkMode && (
+                <img className="w-7 h-7" src={patient} alt="patient" />
+              )}
+              {darkMode && (
+                <img className="w-7 h-7" src={darkUser} alt="patient" />
+              )}
+              <span className="font-semibold">Patient Profile</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/home" className="flex items-center gap-8 text-base">
+              {!darkMode && (
+                <img className="w-7 h-7" src={appoinment} alt="appoinment" />
+              )}
+              {darkMode && (
+                <img className="w-7 h-7" src={darkclnder} alt="appoinment" />
+              )}
+              <span className="font-semibold">Appointments</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/home" className="flex items-center gap-8 text-base">
+              {!darkMode && (
+                <img className="w-7 h-7" src={history} alt="history" />
+              )}
+              {darkMode && (
+                <img className="w-7 h-7" src={darkHistory} alt="history" />
+              )}
+              <span className="font-semibold">Medical History</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/home" className="flex items-center gap-8 text-base">
+              {!darkMode && (
+                <img className="w-7 h-7" src={setting} alt="setting" />
+              )}
+              {darkMode && (
+                <img className="w-7 h-7" src={darkSetting} alt="setting" />
+              )}
+              <span className="font-semibold">Settings</span>
+            </Link>
+          </li>
+        </ul>
+      )}
     </div>
   );
 };

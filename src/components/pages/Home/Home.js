@@ -30,22 +30,22 @@ const Home = () => {
 
   return (
     <>
-      {/* <Navbar darkMode={darkMode} darkModeHandler={darkModeHandler} /> */}
-      {/* <SideBar
+      <Navbar darkMode={darkMode} darkModeHandler={darkModeHandler} />
+      <SideBar
         changeShowHandler={changeShowHandler}
         showSideBar={showSideBar}
         darkMode={darkMode}
-      /> */}
+      />
       <div
         className={`overflow-hidden lg:ml-[76px] pl-0 md:pl-14 pb-[70px] font-poppins ${
           darkMode
             ? 'bg-gradient-to-r from-darkMode1 to-darkMode2'
-            : 'bg-green-400'
+            : 'bg-light'
         }`}
       >
         <div className="grid lg:grid-cols-2 pt-0 md:pt-4">
           <div>
-            <div className=" h-[498px] lg:h-[213px] bg-gradient-to-r from-hotpink to-orange px-4 md:rounded-lg flex flex-col items-center md:flex-row md:justify-between md:items-center gap-8 md:gap-12 lg:gap-28">
+            <div className="h-[498px] lg:h-[213px] bg-gradient-to-r from-hotpink to-orange px-4 md:rounded-lg flex flex-col items-center md:flex-row md:justify-between md:items-center gap-8 md:gap-12 lg:gap-20">
               <img
                 src={sample}
                 alt=""
@@ -101,7 +101,7 @@ const Home = () => {
               />
             </div>
             {/* Todo lo=ist */}
-            {/* <TodoList darkMode={darkMode} /> */}
+            <TodoList darkMode={darkMode} />
           </div>
           {/* upcomming appoinment */}
           <section className={`mx-3 mt-4 md:mt-0 lg:ml-40 lg:mr-6 lg:h-[570px]`}>

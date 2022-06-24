@@ -2,29 +2,31 @@ import React from 'react';
 import uncheck from '../../../assets/icon/Icon_Vector_Uncheck.png';
 import check from '../../../assets/icon/Icon_Vector_Check.png';
 import TaskItem from './TaskItem';
+import small from '../../../assets/icon/small.png'
 
 const TodoList = ({ darkMode }) => {
   return (
     <section
-      className={`w-[390px] hidden  lg:w-[718px] mt-9 px-7 lg:pb-16 pt-4 ${
+      className={`mt-9 mx-3 px-3 md:mx-0 py-4 lg:py-0 lg:px-7 lg:pb-[74px] rounded-lg pt-4 ${
         darkMode ? 'bg-darkMode3' : 'bg-white'
       }`}
     >
       <p
-        className={`mb-2 font-medium text-base ${
+        className={`mb-2 md:pt-3 font-medium text-base ${
           darkMode ? 'text-darkModeText' : 'text-lightDark'
         }`}
       >
         To-Do List
       </p>
-      <div className="flex justify-between pb-6">
+      <div className="flex justify-between pb-6 relative">
         <textarea
           type="text"
-          className={`border rounded-md lg:w-[596px] h-[76px] ${
+          className={`border rounded-md w-full lg:w-[596px] h-[76px] ${
             darkMode ? 'bg-darkInput' : 'bg-white'
           }`}
         ></textarea>
-        <button className="ml-4 self-start px-8 py-2 text-white rounded-md  bg-gradient-to-r from-hotpink to-orange">
+        <img src={small} alt=""  className='lg:hidden absolute right-0 bottom-6'/>
+        <button className="hidden md:block ml-4 self-start px-8 py-2 text-white rounded-md  bg-gradient-to-r from-hotpink to-orange">
           Add
         </button>
       </div>

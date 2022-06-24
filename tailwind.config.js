@@ -15,6 +15,7 @@ module.exports = {
         darkMode1:"#150A09",
         darkMode2:'#2E1619',
         darkMode3:'#2C2222',
+        darkMode4:'#413838',
         darkModeText:'#D1D5DB',
         darkInput:'#EDEBEB',
       },
