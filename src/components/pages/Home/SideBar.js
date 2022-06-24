@@ -16,7 +16,7 @@ import darkUser from '../../../assets/icon/darkUser.png';
 const SideBar = ({ changeShowHandler, showSideBar, darkMode }) => {
   return (
     <div
-      className={` h-screen  px-6 fixed top-0 ${
+      className={`z-50 h-screen  px-6 fixed top-0 ${
         showSideBar
           ? 'w-[264px] bg-white'
           : 'w-[76px] bg-transparent overflow-hidden'

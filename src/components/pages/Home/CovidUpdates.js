@@ -23,8 +23,8 @@ const CovidUpdates = ({ darkMode }) => {
       </div>
       <div className="flex flex-col items-center md:flex-row gap-3 pt-7">
         <img src={covidImage} alt="covid" className="w-[228px] h-[228px]" />
-        <div className="bg-gradient-to-r from-hotpink to-orange w-full rounded-lg flex flex-col py-3 justify-center items-center">
-          <div className="text-white font-medium">
+        <div className="bg-gradient-to-r from-hotpink to-orange w-full rounded-lg flex flex-col py-3 justify-center items-center  md:justify-between md:flex-row text-white font-medium md:px-4 text-center">
+          <div>
             <div className="text-center flex flex-col gap-4 mb-4">
               <p className="text-sm">Infection Number </p>
               <p className="text-4xl ">500</p>
@@ -33,6 +33,8 @@ const CovidUpdates = ({ darkMode }) => {
               <p className="text-sm">Infection Rate </p>
               <p className="text-4xl ">10%</p>
             </div>
+          </div>
+          <div>
             <div className="text-center lg:hidden flex flex-col gap-4 mb-4">
               <p className="text-sm">Total Infection</p>
               <p className="text-4xl ">500,000</p>

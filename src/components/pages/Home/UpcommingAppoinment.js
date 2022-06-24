@@ -2,8 +2,8 @@ import React from 'react';
 
 const UpcommingAppoinment = ({ darkMode }) => {
   return (
-    <div className={`flex flex-col gap-6`}>
-      <div className="text-darkText flex justify-center pt-6 relative">
+    <div className='flex flex-col gap-6'>
+      <div className="text-darkText flex justify-center pt-6 z-10 relative">
         <div className='w-[48px] lg:w-[63px]  bg-white pb-1  text-darkText rounded-xl border border-["#EDEBEB"] flex flex-col items-center justify-center -mr-4 z-10'>
           <p className="font-medium text-[10px] lg:text-[13px] opacity-60">
             2022

@@ -7,7 +7,7 @@ import small from '../../../assets/icon/small.png';
 const TodoList = ({ darkMode }) => {
   return (
     <section
-      className={` mt-9 mx-3 px-3 md:mx-0 py-4 lg:py-0 lg:px-7 lg:pb-[74px] rounded-lg pt-4 ${
+      className={`md:row-start-2 md:row-end-3 mt-9 mx-3 px-3 md:mx-0 py-4 lg:py-0 lg:px-7 lg:pb-[74px] rounded-lg pt-4 z-10 ${
         darkMode ? 'bg-darkMode3' : 'bg-white'
       }`}
     >
@@ -21,7 +21,7 @@ const TodoList = ({ darkMode }) => {
       <div className="flex justify-between pb-6 relative">
         <textarea
           type="text"
-          className={`border rounded-md w-full lg:w-[596px] h-[76px] ${
+          className={`z-10 border rounded-md w-full lg:w-[596px] h-[76px] ${
             darkMode ? 'bg-darkInput' : 'bg-white'
           }`}
         ></textarea>

@@ -41,8 +41,8 @@ const Home = () => {
           darkMode ? 'bg-gradient-to-r from-darkMode1 to-darkMode2' : 'bg-light'
         }`}
       >
-        <div className="grid-rows-2 grid grid-cols-1 md:grid-cols-5 xl:grid-cols-5 lg:gap-2 xl:gap-16 2xl:gap-40 pt-0 md:pt-4">
-          <div className="md:col-span-5 lg:col-span-3 xl:col-span-3 md:mr-5 mr-0">
+        <div className="grid grid-cols-1 md:grid-cols-5 xl:grid-cols-5 lg:gap-2 xl:gap-16 2xl:gap-40 pt-0 md:pt-4">
+          <div className="md:row-start-1 md:row-end-2 md:col-span-5 lg:col-span-3 xl:col-span-3 md:mr-5 mr-0">
             <div className="pb-10 lg:h-[213px] bg-gradient-to-r from-hotpink to-orange px-4 md:rounded-lg flex flex-col items-center md:flex-row md:justify-between md:items-center gap-8 md:gap-6">
               <img
                 src={sample}
@@ -99,17 +99,23 @@ const Home = () => {
                 condition="Normal"
               />
             </div>
-            {/* Todo lo=ist */}
+            {/* Todo list */}
             <TodoList darkMode={darkMode} />
           </div>
           {/* upcomming appoinment */}
-          <section className="md:col-span-5 lg:col-span-2 mx-3 mt-4 md:mt-0 lg:mr-6 lg:h-[570px]">
+          <section className="md:col-span-5 lg:col-span-2 mx-3 mt-4 md:-ml-1 md:mr-4 md:mt-4 lg:mr-6">
             <div
               className={`p-4 rounded-lg ${
                 darkMode ? 'bg-darkMode3' : 'bg-white'
               }`}
             >
-              <p className="font-medium font-poppins">Upcoming Appointments</p>
+              <p
+                className={`font-medium font-poppins ${
+                  darkMode ? 'text-darkModeText' : 'text-lightDark'
+                }`}
+              >
+                Upcoming Appointments
+              </p>
               <UpcommingAppoinment darkMode={darkMode} />
               <UpcommingAppoinment darkMode={darkMode} />
               <UpcommingAppoinment darkMode={darkMode} />
@@ -118,7 +124,6 @@ const Home = () => {
             <CovidUpdates darkMode={darkMode} />
           </section>
         </div>
-        {/* <div className="hidden grid grid-cols-2 lg:grid-cols-4 gap-8 w-[718px] pt-7"></div> */}
       </div>
     </>
   );
